@@ -21,7 +21,8 @@
             "aot": false,
             "assets": [
               "src/SeedGuard_Logo.png",
-              "src/assets"
+              "src/assets",
+              "src/web.config"
             ],
             "styles": [
               "./node_modules/@nebular/theme/styles/prebuilt/cosmic.css",
