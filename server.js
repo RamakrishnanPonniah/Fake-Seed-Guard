@@ -15,6 +15,7 @@ const sampleDataRoot = "C:/Users/v.a.palanichamy/Documents/Seed Guard/Image Prep
 const endPoint = "https://centralindia.api.cognitive.microsoft.com";
 const publishIterationName = "SeedGuard1"; 
  const predictor = new PredictionApiClient(predictionKey, endPoint); 
+ const root = './';
 
 var filename = ""; 
 // specify the folder
@@ -39,9 +40,9 @@ var storage = multer.diskStorage({
   }
 });
 var upload = multer({ storage: storage });
-app.get("/",function(req,res){
+app.get("*",function(req,res){
 	res.setHeader('Content-Type', 'text/html');
-	res.sendFile('index.html');
+	res.sendFile('dist/index.html', {root: root});
 });
 app.post("/predict", upload.array("uploads[]", 12), function (req, res) {
   
