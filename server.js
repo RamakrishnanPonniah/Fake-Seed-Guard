@@ -19,7 +19,7 @@ const publishIterationName = "SeedGuard1";
 var filename = ""; 
 // specify the folder
 app.use(express.static(path.join(__dirname, 'uploads')));
-app.use(express.static(path.join(__dirname, 'dist/seeder')));
+app.use(express.static(path.join(__dirname, 'dist')));
 // headers and content type
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -41,7 +41,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 app.get("/",function(req,res){
 	res.setHeader('Content-Type', 'text/html');
-	res.sendfile('index.html');
+	res.sendFile('index.html');
 });
 app.post("/predict", upload.array("uploads[]", 12), function (req, res) {
   
