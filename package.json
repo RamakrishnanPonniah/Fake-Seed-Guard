@@ -5,9 +5,7 @@
     "ng": "ng",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",    
-    "start": "node server.js",
-    "start-ng": "ng serve",
+    "e2e": "ng e2e",  
     "build": "ng build --prod --aot"
   },
   "private": true,
