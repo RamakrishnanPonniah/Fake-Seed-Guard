@@ -41,7 +41,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 app.get("/",function(req,res){
 	res.setHeader('Content-Type', 'text/html');
-	res.sendfile(__dirname+'/dist/index.html');
+	res.sendfile('/dist/index.html');
 });
 app.post("/predict", upload.array("uploads[]", 12), function (req, res) {
   
