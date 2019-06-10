@@ -1,0 +1,72 @@
+<!-- <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(url)" height="400" width="100%"></iframe> -->
+
+<!--<section class="container">
+<nb-card>
+    <nb-card-body>
+<input id="cin" name="cin" type="file" (change)="fileChangeEvent($event)" placeholder="Upload a file..." multiple/>
+<button type="button" class="btn btn-success btn-s" (click)="upload()">
+    <i class="glyphicon glyphicon-open-file"></i>&nbsp;Upload
+</button>
+</nb-card-body>
+  </nb-card>
+</section>-->
+<nb-layout>
+  <nb-layout-column class="colored-column-warning">
+    <section class="container">
+      <div class="form-group">
+        <input nbInput id="cin" name="cin" type="file" class="form-control-file border"
+          (change)="fileChangeEvent($event)" placeholder="Upload a file..." multiple />
+        <button type="button" class="btn btn-success btn-s" (click)="upload()">
+          <i class="glyphicon glyphicon-open-file"></i>&nbsp;Upload
+        </button>
+      </div>
+    </section>
+    <div id="imgPreview">
+      <div class="row">
+        <div class="col-sm-6 form-group" *ngFor="let url of urls | slice:0:2; let i=index">
+          <figure class="figure">
+            <figcaption class="figure-caption" *ngIf="i==0"><strong>Top View</strong></figcaption>
+            <figcaption class="figure-caption" *ngIf="i==1"><strong>Lateral View</strong></figcaption>
+            <figcaption class="figure-caption" *ngIf="i==2">3</figcaption>
+            <figcaption class="figure-caption" *ngIf="i==3">4</figcaption>
+            <img class=".rounded img-fluid" [src]="url">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </nb-layout-column>
+  <nb-layout-column class="colored-column-danger">
+    <section class="mx-auto">
+      <div style="display: flex; flex-direction: column; padding: 10px">
+        <div style="display: flex; padding: 10px">
+          <div style="flex:1"><label>Prediction Decision</label></div>
+          <div style="flex:1"><input nbInput type="text" [(ngModel)]="decisionVal"></div>
+        </div>
+        <div style="display: flex; padding: 10px">
+            <div style="flex:1"><label>Prediction Score</label></div>
+            <div style="flex:1">
+              <!-- <mwl-gauge
+              [max]="100"
+              [dialStartAngle]="0"
+              [dialEndAngle]="180.001"
+              [value]="guageVal"
+              [dialRadius]="40"
+              [animated]="true"
+              [animationDuration]="1">
+            </mwl-gauge> -->
+            <div class="sc-gauge">
+                <div class="sc-background">
+                  <div class="sc-percentage"></div>
+                  <div class="sc-mask"></div>
+                  <span class="sc-value">{{guageVal}}</span>
+                </div>
+                <span class="sc-min">0</span>
+                <span class="sc-max">100</span>
+            </div>
+          </div>
+          </div>
+      </div>
+
+    </section>
+  </nb-layout-column>
+</nb-layout>

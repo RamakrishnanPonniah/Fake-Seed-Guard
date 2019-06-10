@@ -1,0 +1,41 @@
+<nb-layout>
+
+  <nb-layout-header *ngIf=isUserLoggedIn; fixed class="background-header">
+    <div style="display: flex;width: 100%">
+      <div style="width:10%;">
+          <div style="margin-top:10px"><img style="height: 76px;" src="/assets/images/leftlogo.png"></div>
+      </div>
+      <div style="width:80%" class="align-center">
+        <h1>INTELLIGENT SEED GUARD</h1>
+      </div>
+      <div style="width:10%">
+         
+          <div style="margin-top:10px"><img style="height: 76px;" src="/assets/images/rightlogo.jpg"></div>
+          <span><a (click)="logOut()">Log Out</a></span>
+      </div>
+    </div>
+
+  </nb-layout-header>
+
+  <nb-layout-column style="background: url(/assets/images/back.png) no-repeat center center fixed !important;
+  background-size: cover;" class="layout-column">
+    <div *ngIf=isUserLoggedIn;>
+        <nb-tabset fullWidth  (changeTab)="routeChange($event)" >
+            <nb-tab tabTitle="About">
+            </nb-tab>
+            <nb-tab tabTitle="Verify Seed">        
+            </nb-tab>
+            <nb-tab tabTitle="Recent Activity" >
+              </nb-tab>
+           </nb-tabset>
+      <!-- <nb-route-tabset [tabs]="tabs" fullWidth></nb-route-tabset> -->
+    </div>
+    
+      <router-outlet></router-outlet>
+  </nb-layout-column>
+
+  <nb-layout-footer fixed style="background: #434343">
+    Disclaimer: Prototype for GTIC-2019.
+  </nb-layout-footer>
+
+</nb-layout>
