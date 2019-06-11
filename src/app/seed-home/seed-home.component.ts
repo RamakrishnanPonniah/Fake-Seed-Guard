@@ -7,7 +7,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 })
 export class SeedHomeComponent implements OnInit {
 
-  @ViewChild('slideContainer',{static:true}) container:ElementRef;
+  @ViewChild('slideContainer') container:ElementRef;
   slideIndex = 0;
   constructor() { }
 
