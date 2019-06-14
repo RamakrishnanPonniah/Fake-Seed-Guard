@@ -1,6 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, TemplateRef } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 import { HttpClient } from "@angular/common/http";
+import {NbDialogService,NbDialogRef} from "@nebular/theme";
 import { map } from "rxjs/operators";
 import {
   PredictionAPIClient,
@@ -34,7 +35,7 @@ export class SeedApplicationComponent implements OnInit {
 
   publishIterationName = "SeedGuard1";
   //url="http://127.0.0.1:8887/Seed.html";
-  constructor(private sanitizer: DomSanitizer, private http: HttpClient) {}
+  constructor(private dialogService:NbDialogService, private sanitizer: DomSanitizer, private http: HttpClient) {}
 
   ngOnInit() {}
   
