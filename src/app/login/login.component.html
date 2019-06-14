@@ -1,21 +1,39 @@
-<div id="id01" class="modal">
-  
-  <form #loginForm="ngForm" class="modal-content animate" (submit)="login(loginForm)">
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" ngModel #userName="ngModel" placeholder="Enter Username" name="uname" required>
+<div style="display:flex; background:white; height: 100%;">
+  <div id="id01" class="" style="flex:1; flex-basis: 30%">
+    <form
+      #loginForm="ngForm"
+      class="modal-content animate"
+      (submit)="login(loginForm)"
+    >
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input
+          type="text"
+          ngModel
+          #userName="ngModel"
+          name="uname"
+          required
+        />
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" ngModel #pwd="ngModel" placeholder="Enter Password" name="psw" required>
-      <label *ngIf="loginError">Invalid Credentials</label>  
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          ngModel
+          #pwd="ngModel"
+          name="psw"
+          required
+        />
+        <label *ngIf="loginError">Invalid Credentials</label>
+        <button type="submit">Login</button>
+        <span class="psw"> <a href="#">Forgot password?</a></span>
+      </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <span class="psw"> <a href="#">Forgot password?</a></span>
-    </div>
-  </form>
+      <!-- <div class="container">
+        <span class="psw"> <a href="#">Forgot password?</a></span>
+      </div> -->
+    </form>
+  </div>
+  <div style="flex:1; flex-basis: 70%">
+    <img src="/assets/images/Img7.jpg" style="width:100%; min-height:100%" />
+  </div>
 </div>
