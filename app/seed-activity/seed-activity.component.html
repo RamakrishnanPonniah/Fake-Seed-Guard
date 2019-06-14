@@ -1,0 +1,65 @@
+<ng-template #dialog let-data let-ref="dialogRef">
+  <nb-card>
+    <nb-card-body>Submitted Succesfully to<br/>
+      <strong>National Seed Corporation</strong></nb-card-body>
+  </nb-card>
+</ng-template>
+
+<div class="width-100 text-center">
+  
+  <div style="display: flex; position: relative;padding-bottom: 10px;">
+    <input class="btn" (click)="open(dialog)" type="button" value="Report to NSC" [disabled]="selectedSeeds.length >0 ? '':'disabled'">
+  </div>
+</div>
+<div class="activity-table">
+  <table class="width-100">
+    <thead>
+      <tr>
+        <th>
+
+        </th>
+        <th>
+          Seed Name
+        </th>
+        <th>
+          Date
+        </th>
+        <th>
+          Fake
+        </th>
+        <th>
+          Original
+        </th>
+        <th>
+          Reported to NSC
+          </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let activity of activities" class="border-bottom">
+        <td style="width:5%;">
+          <input type="checkbox" (change)="selectSeed($event, activity.name)">
+        </td>
+        <td style="width:30%;">
+          {{activity.name}}
+        </td>
+        <td style="width:20%;">
+          {{activity.date | date:'shortDate'}}
+        </td>
+        <td style="width:15%;">
+          <!-- <nb-icon icon="checkmark" *ngIf="activity.fake"></nb-icon>
+          <nb-icon icon="close" *ngIf="!activity.fake"></nb-icon> -->
+        </td>
+        <td style="width:15%;">
+          <!-- <nb-icon icon="checkmark" *ngIf="activity.original"></nb-icon>
+          <nb-icon icon="close" *ngIf="!activity.original"></nb-icon> -->
+        </td>
+        <td style="width:15%;">
+            <!-- <nb-icon icon="checkmark" *ngIf="activity.status"></nb-icon>
+            <nb-icon icon="close" *ngIf="!activity.status"></nb-icon> -->
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
