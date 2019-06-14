@@ -48,7 +48,7 @@
 
   <nb-layout-column
     style="background-size: cover;"
-    [class.background-img]="isUserLoggedIn"
+    [class.background-img]="isUserLoggedIn || mobileQuery.matches"
     [class.padding0]="!isUserLoggedIn"
     [ngStyle]="{
       background: isUserLoggedIn

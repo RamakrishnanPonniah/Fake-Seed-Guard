@@ -99,3 +99,8 @@ button:disabled {
   color: white;
   cursor: not-allowed;
 }
+
+.application-container {
+  height: 75vh;
+  overflow: scroll;
+}
