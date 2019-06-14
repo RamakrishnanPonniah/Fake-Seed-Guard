@@ -1,23 +1,28 @@
 <ng-template #dialog let-data let-ref="dialogRef">
   <nb-card>
-    <nb-card-body>Submitted Succesfully to<br/>
-      <strong>National Seed Corporation</strong></nb-card-body>
+    <nb-card-body
+      >Submitted Succesfully to<br />
+      <strong>National Seed Corporation</strong></nb-card-body
+    >
   </nb-card>
 </ng-template>
 
 <div class="width-100 text-center">
-  
   <div style="display: flex; position: relative;padding-bottom: 10px;">
-    <input class="btn" (click)="open(dialog)" type="button" value="Report to NSC" [disabled]="selectedSeeds.length >0 ? '':'disabled'">
+    <input
+      class="btn btn-danger"
+      (click)="open(dialog)"
+      type="button"
+      value="Report to NSC"
+      [disabled]="selectedSeeds.length > 0 ? '' : 'disabled'"
+    />
   </div>
 </div>
 <div class="activity-table">
   <table class="width-100">
     <thead>
       <tr>
-        <th>
-
-        </th>
+        <th></th>
         <th>
           Seed Name
         </th>
@@ -32,34 +37,33 @@
         </th>
         <th>
           Reported to NSC
-          </th>
+        </th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let activity of activities" class="border-bottom">
         <td style="width:5%;">
-          <input type="checkbox" (change)="selectSeed($event, activity.name)">
+          <input type="checkbox" (change)="selectSeed($event, activity.name)" />
         </td>
         <td style="width:30%;">
-          {{activity.name}}
+          {{ activity.name }}
         </td>
         <td style="width:20%;">
-          {{activity.date | date:'shortDate'}}
+          {{ activity.date | date: "shortDate" }}
         </td>
         <td style="width:15%;">
-          <!-- <nb-icon icon="checkmark" *ngIf="activity.fake"></nb-icon>
-          <nb-icon icon="close" *ngIf="!activity.fake"></nb-icon> -->
+          <fa class="green" name="check" *ngIf="activity.fake"></fa>
+          <fa class="red" name="times" *ngIf="!activity.fake"></fa>
         </td>
         <td style="width:15%;">
-          <!-- <nb-icon icon="checkmark" *ngIf="activity.original"></nb-icon>
-          <nb-icon icon="close" *ngIf="!activity.original"></nb-icon> -->
+          <fa class="green" name="check" *ngIf="activity.original"></fa>
+          <fa class="red" name="times" *ngIf="!activity.original"></fa>
         </td>
         <td style="width:15%;">
-            <!-- <nb-icon icon="checkmark" *ngIf="activity.status"></nb-icon>
-            <nb-icon icon="close" *ngIf="!activity.status"></nb-icon> -->
+          <fa class="green" name="check" *ngIf="activity.status"></fa>
+          <fa class="red" name="times" *ngIf="!activity.status"></fa>
         </td>
       </tr>
     </tbody>
-
   </table>
 </div>

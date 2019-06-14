@@ -73,3 +73,12 @@ img {
     opacity: 1;
   }
 }
+
+.mobile-container {
+  overflow: scroll;
+  height: 75vh;
+}
+
+.mobile-container > div > img {
+  height: 225px;
+}

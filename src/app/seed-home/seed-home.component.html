@@ -1,8 +1,13 @@
 <div
   style="margin: auto;
-width: 70%"
+  padding: 20px;
+  width: 70%;"
+  *ngIf="!mobileQuery.matches"
 >
   <ngb-carousel>
+    <ng-template ngbSlide>
+      <img src="/assets/images/Img7.jpg" style="width:100%" />
+    </ng-template>
     <ng-template ngbSlide>
       <div class="home-content" style="height:68vh">
         <p>
@@ -38,8 +43,44 @@ width: 70%"
     <ng-template ngbSlide>
       <img src="/assets/images/Img6.JPG" style="width:100%" />
     </ng-template>
-    <ng-template ngbSlide>
-      <img src="/assets/images/Img7.jpg" style="width:100%" />
-    </ng-template>
   </ngb-carousel>
+</div>
+
+<div class="mobile-container" *ngIf="mobileQuery.matches">
+  <div>
+    <img src="./assets/images/Img7.jpg" style="width:100%" />
+  </div>
+  <div class="slide-content">
+    <p>
+      Seed fraud encompasses the deliberate substitution, addition, tampering or
+      misrepresentation of Seed, or misleading statements made for economic
+      gain.
+    </p>
+    <p>
+      Only Seasoned & Cautious farmers can identify the unauthentic seeds at
+      first instance based on the physical appearance. New bees in farming will
+      find difficulty in identifying the unauthentic seeds on first look. Fake
+      seeds account to 30-35% of seeds available in the developing countries
+      agricultural market.
+    </p>
+    <p>
+      To avoid the above problems, Intelligent Seed Guard allows you to predict
+      the authenticity of the seed by a simple solution.
+    </p>
+    <p>
+      Click on the "VERIFY SEED" menu above to explore.
+    </p>
+  </div>
+  <div>
+    <img src="./assets/images/Img2..JPG" style="width:100%" />
+  </div>
+  <div>
+    <img src="./assets/images/Img3.JPG" style="width:100%" />
+  </div>
+  <div>
+    <img src="./assets/images/Img4.JPG" style="width:100%" />
+  </div>
+  <div>
+    <img src="./assets/images/Img6.JPG" style="width:100%" />
+  </div>
 </div>

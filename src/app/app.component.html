@@ -1,17 +1,37 @@
 <nb-layout>
   <nb-layout-header fixed class="background-header">
     <div style="display: flex;width: 100%">
-      <div style="width:10%;">
+      <div
+        [class.logo-container-mobile]="mobileQuery.matches"
+        [class.logo-container]="!mobileQuery.matches"
+      >
         <div>
-          <img style="height: 76px;" src="/assets/images/leftlogo.png" />
+          <img
+            [class.logo-mobile]="mobileQuery.matches"
+            [class.logo]="!mobileQuery.matches"
+            class="logo"
+            src="/assets/images/leftlogo.png"
+          />
         </div>
       </div>
-      <div style="width:80%;" class="align-center">
+      <div
+        [class.header-container-mobile]="mobileQuery.matches"
+        [class.header-container]="!mobileQuery.matches"
+        class="align-center"
+      >
         <h1>INTELLIGENT SEED GUARD</h1>
       </div>
-      <div style="width:10%">
+      <div
+        [class.logo-container-mobile]="mobileQuery.matches"
+        [class.logo-container]="!mobileQuery.matches"
+      >
         <div>
-          <img style="height: 76px;" src="/assets/images/rightlogo.jpg" />
+          <img
+            [class.logo-mobile]="mobileQuery.matches"
+            [class.logo]="!mobileQuery.matches"
+            class="logo"
+            src="/assets/images/rightlogo.jpg"
+          />
         </div>
 
         <!-- <span
@@ -53,15 +73,14 @@
     Disclaimer: Prototype for GTIC-2019.
     <button
       *ngIf="isUserLoggedIn"
-      style="position: fixed;
-            margin-left: calc(46% + 25px);
-    margin-top: -18px; font-weight:bolder;cursor:pointer;"
       (click)="logOut()"
       type="button"
-      class="btn-danger"
+      [class.logout-mobile]="mobileQuery.matches"
+      [class.logout]="!mobileQuery.matches"
+      class="btn-danger logout"
       value="Log Out"
     >
-      Log Out
+      <fa name="power-off"></fa>
     </button>
   </nb-layout-footer>
 </nb-layout>

@@ -75,25 +75,27 @@ td {
   padding: 10px;
 }
 
-td > label{
+td > label {
   font-size: 15px;
+  color: black;
 }
 
 label {
   font-weight: bolder;
-  font-size:20px;
+  font-size: 20px;
+  color: white;
 }
 
-img{
+img {
   border: 3px solid white;
 }
 
-.btn-success{
+.btn-success {
   background-color: #12de12;
   border-color: #12de12;
 }
 
 button:disabled {
   color: white;
-  cursor:not-allowed;
+  cursor: not-allowed;
 }

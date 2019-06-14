@@ -32,26 +32,21 @@ h1 {
   color: white;
 }
 
-.nb-theme-cosmic nb-route-tabset .route-tab.active .tab-link {
-  color: white;
-}
-.nb-theme-cosmic nb-route-tabset .tab-link {
-  color: white;
+.nb-theme-cosmic nb-tabset .tabset .tab.active a {
+  color: white !important;
+  font-weight: bold;
 }
 
 body {
   /* height: 100vh !important;
     overflow: scroll; */
-    overflow: hidden;
+  overflow: hidden;
 }
 
-.nb-theme-cosmic nb-tabset .tab-link {
-  color: white !important;
-}
-
-.nb-theme-cosmic nb-tabset .tab:hover .tab-link:hover,
-.nb-theme-cosmic nb-tabset .tab.active .tab-link {
+.nb-theme-cosmic nb-tabset .tabset .tab a:hover,
+.nb-theme-cosmic nb-tabset .tabset .tab a {
   color: yellow !important;
+  font-weight: bold;
 }
 
 .nb-theme-cosmic nb-tabset .tab-link::before {
@@ -99,15 +94,27 @@ mwl-gauge > .gauge > .value-text {
   background: white !important;
 }
 
-.background-img{
+.background-img {
   background: url(/assets/images/back.png) no-repeat center center fixed !important;
 }
 
-.nb-theme-cosmic nb-layout .layout .layout-container .content .columns nb-layout-column {
+.nb-theme-cosmic
+  nb-layout
+  .layout
+  .layout-container
+  .content
+  .columns
+  nb-layout-column {
   padding: 0px 10px;
 }
 
-.nb-theme-cosmic nb-layout .layout .layout-container .content nb-layout-footer nav{
+.nb-theme-cosmic
+  nb-layout
+  .layout
+  .layout-container
+  .content
+  nb-layout-footer
+  nav {
   line-height: 0rem !important;
 }
 
@@ -122,15 +129,50 @@ mwl-gauge > .gauge > .value-text {
   border-radius: 50% !important;
   display: inline-block !important;
   transition: background-color 0.6s ease;
-  opacity: .5;
-  transition: opacity .6s ease;
+  opacity: 0.5;
+  transition: opacity 0.6s ease;
 }
 
-button{
+button {
   font-weight: bold !important;
 }
 
-
-.padding0{
+.nb-theme-cosmic nb-layout .layout nb-layout-header nav,
+.padding0 {
   padding: 0px !important;
+}
+
+.logo-mobile {
+  height: 50px;
+}
+.logo-container-mobile {
+  width: 20%;
+}
+.header-container-mobile {
+  width: 60% !important;
+}
+
+.logout-mobile {
+  position: fixed;
+  margin-left: calc(39% + 25px);
+  margin-top: -18px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.logo {
+  height: 76px;
+}
+.logo-container {
+  width: 10%;
+}
+.header-container {
+  width: 80% !important;
+}
+.logout {
+  position: fixed;
+  margin-left: calc(46% + 25px);
+  margin-top: -18px;
+  font-weight: bolder;
+  cursor: pointer;
 }

@@ -19,6 +19,7 @@ import { SeedActivityComponent } from "./seed-activity/seed-activity.component";
 import { SeedApplicationComponent } from "./seed-application/seed-application.component";
 import { LoginComponent } from "./login/login.component";
 import { NgbCarouselModule } from "@ng-bootstrap/ng-bootstrap";
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { NgbCarouselModule } from "@ng-bootstrap/ng-bootstrap";
     FormsModule,
     HttpClientModule,
     NbSpinnerModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
