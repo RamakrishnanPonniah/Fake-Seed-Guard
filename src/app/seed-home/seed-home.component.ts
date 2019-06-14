@@ -7,7 +7,7 @@ import { NgbCarouselConfig } from "@ng-bootstrap/ng-bootstrap";
   styleUrls: ["./seed-home.component.css"]
 })
 export class SeedHomeComponent implements OnInit {
-  @ViewChild("slideContainer", { static: true }) container: ElementRef;
+  @ViewChild("slideContainer") container: ElementRef;
   slideIndex = 0;
   constructor(config: NgbCarouselConfig) {
     config.interval = 1000;
