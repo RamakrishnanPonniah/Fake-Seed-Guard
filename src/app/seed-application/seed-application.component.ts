@@ -37,6 +37,22 @@ export class SeedApplicationComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer, private http: HttpClient) {}
 
   ngOnInit() {}
+  
+  report(dialog: NbDialogRef<any>, submitted: TemplateRef<any>) {
+    dialog.close();
+    this.dialogService.open(submitted, {
+      context: {
+        title: "This is a title passed to the dialog component"
+      }
+    });
+  }
+  open(dialog: TemplateRef<any>) {
+    this.dialogService.open(dialog, {
+      context: {
+        title: "This is a title passed to the dialog component"
+      }
+    });
+  }
 
   verifyImage(formData) {
     const predictor = new PredictionAPIClient(
