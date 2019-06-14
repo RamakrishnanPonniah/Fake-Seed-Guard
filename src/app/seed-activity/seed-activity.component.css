@@ -11,12 +11,10 @@
 }
 
 input[type=button]{
-    background-color: #007bff;
     width: 15%;
 }
 
 input[type=button]:disabled {
-    background-color: #007bff;
     color: white;
     cursor:not-allowed;
   }
