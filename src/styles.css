@@ -1,67 +1,136 @@
 /* You can add global styles to this file, and also import other style files */
-nav{
-    background: white !important;
+nav {
+  background: white !important;
 }
-h1 {   
-    color:#04be04 !important;
-}
-
-.nb-theme-cosmic nb-layout .layout .layout-container .content nb-layout-footer nav{
-    background: grey !important;
+h1 {
+  color: #04be04 !important;
 }
 
-.nb-theme-cosmic p{
-    font-size:22px;
-    text-align: justify;
+.nb-theme-cosmic
+  nb-layout
+  .layout
+  .layout-container
+  .content
+  nb-layout-footer
+  nav {
+  background: grey !important;
+}
+
+.nb-theme-cosmic p {
+  font-size: 22px;
+  text-align: justify;
   text-justify: inter-word;
   color: white;
 }
 
-.nb-theme-cosmic h2, .nb-theme-cosmic .h2, .nb-theme-cosmic h5, .nb-theme-cosmic .h5{
-    font-weight: bold;
-    margin:10px;
-    color:white;
+.nb-theme-cosmic h2,
+.nb-theme-cosmic .h2,
+.nb-theme-cosmic h5,
+.nb-theme-cosmic .h5 {
+  font-weight: bold;
+  margin: 10px;
+  color: white;
 }
 
-.nb-theme-cosmic nb-route-tabset .route-tab.active .tab-link{
-    color:white;
+.nb-theme-cosmic nb-route-tabset .route-tab.active .tab-link {
+  color: white;
 }
-.nb-theme-cosmic nb-route-tabset .tab-link{
-    color:white;
+.nb-theme-cosmic nb-route-tabset .tab-link {
+  color: white;
 }
 
-body{
-    /* height: 100vh !important;
+body {
+  /* height: 100vh !important;
     overflow: scroll; */
+    overflow: hidden;
 }
 
-.nb-theme-cosmic nb-route-tabset .route-tab:hover .tab-link:hover{
-    color:darkgreen;
+.nb-theme-cosmic nb-tabset .tab-link {
+  color: white !important;
 }
 
-.tab-text{
-    font-size: 20px;
+.nb-theme-cosmic nb-tabset .tab:hover .tab-link:hover,
+.nb-theme-cosmic nb-tabset .tab.active .tab-link {
+  color: yellow !important;
+}
+
+.nb-theme-cosmic nb-tabset .tab-link::before {
+  height: 0px;
+}
+.tab-text {
+  font-size: 20px;
 }
 
 mwl-gauge {
-    width: 150px;
-    height: 150px;
-    display: block;
-    padding: 10px;
-  }
-  mwl-gauge > .gauge > .dial {
-    stroke: #eee;
-    stroke-width: 2;
-    fill: rgba(0,0,0,0);
-  }
-  mwl-gauge > .gauge > .value {
-    stroke: rgb(47, 227, 255);
-    stroke-width: 2;
-    fill: rgba(0,0,0,0);
-  }
-  mwl-gauge > .gauge > .value-text {
-    fill: rgb(47, 227, 255);
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1em;
-  }
+  width: 150px;
+  height: 150px;
+  display: block;
+  padding: 10px;
+}
+mwl-gauge > .gauge > .dial {
+  stroke: #eee;
+  stroke-width: 2;
+  fill: rgba(0, 0, 0, 0);
+}
+mwl-gauge > .gauge > .value {
+  stroke: rgb(47, 227, 255);
+  stroke-width: 2;
+  fill: rgba(0, 0, 0, 0);
+}
+mwl-gauge > .gauge > .value-text {
+  fill: rgb(47, 227, 255);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.nb-theme-cosmic nb-layout .layout {
+  background-color: transparent;
+}
+
+.nb-theme-cosmic [nbInput]:disabled {
+  outline: 1px solid white;
+  background-color: #252547;
+  border-color: #1b1b38;
+  color: #6a6a94;
+}
+
+.nb-theme-cosmic nb-card {
+  background: white !important;
+}
+
+.background-img{
+  background: url(/assets/images/back.png) no-repeat center center fixed !important;
+}
+
+.nb-theme-cosmic nb-layout .layout .layout-container .content .columns nb-layout-column {
+  padding: 0px 10px;
+}
+
+.nb-theme-cosmic nb-layout .layout .layout-container .content nb-layout-footer nav{
+  line-height: 0rem !important;
+}
+
+.carousel-indicators li {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  cursor: pointer;
+  height: 15px !important;
+  width: 15px !important;
+  margin: 0 2px !important;
+  background-color: yellow !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+  transition: background-color 0.6s ease;
+  opacity: .5;
+  transition: opacity .6s ease;
+}
+
+button{
+  font-weight: bold !important;
+}
+
+
+.padding0{
+  padding: 0px !important;
+}
