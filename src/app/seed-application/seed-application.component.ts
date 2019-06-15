@@ -1,7 +1,7 @@
 import { Component, OnInit, TemplateRef } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 import { HttpClient } from "@angular/common/http";
-import {NbDialogService,NbDialogRef} from "@nebular/theme";
+import { NbDialogService, NbDialogRef } from "@nebular/theme";
 import { map } from "rxjs/operators";
 import {
   PredictionAPIClient,
@@ -23,6 +23,9 @@ export class SeedApplicationComponent implements OnInit {
   fakeData = "";
   guageVal = 0;
   decisionVal = "";
+  alert = "";
+  alertTitle = "";
+  reportDat = {};
 
   private imageSrc: Blob;
 
@@ -35,17 +38,38 @@ export class SeedApplicationComponent implements OnInit {
 
   publishIterationName = "SeedGuard1";
   //url="http://127.0.0.1:8887/Seed.html";
-  constructor(private dialogService:NbDialogService, private sanitizer: DomSanitizer, private http: HttpClient) {}
+  constructor(
+    private dialogService: NbDialogService,
+    private sanitizer: DomSanitizer,
+    private http: HttpClient
+  ) {}
 
   ngOnInit() {}
-  
+
   report(dialog: NbDialogRef<any>, submitted: TemplateRef<any>) {
-    dialog.close();
-    this.dialogService.open(submitted, {
-      context: {
-        title: "This is a title passed to the dialog component"
-      }
-    });
+    if (
+      this.reportDat["info"] &&
+      this.reportDat["date"] &&
+      this.reportDat["quality"]
+    ) {
+      dialog.close();
+      this.alertTitle = "Reported Succesfully To";
+      this.alert = "National Seed Corporation";
+      this.dialogService.open(submitted, {
+        context: {
+          title: "This is a title passed to the dialog component"
+        }
+      });
+      this.reportDat = {};
+    } else {
+      this.alertTitle = "Fields Required";
+      this.alert = "Please fill all the fields";
+      this.dialogService.open(submitted, {
+        context: {
+          title: "This is a title passed to the dialog component"
+        }
+      });
+    }
   }
   open(dialog: TemplateRef<any>) {
     this.dialogService.open(dialog, {

@@ -36,19 +36,16 @@ export class AppComponent implements OnInit, OnDestroy {
 
   tabs: any[] = [
     {
-      title: "About",
-      icon: "home",
+      title: "ABOUT",
       route: "./home"
     },
     {
-      title: "Verify Seed",
-      icon: "paper-plane-outline",
+      title: "VERIFY SEED",
       responsive: true,
       route: ["./launch"]
     },
     {
-      title: "Recent Activity",
-      icon: "flash-outline",
+      title: "RECENT ACTIVITY",
       responsive: true,
       route: ["./activity"]
     }
@@ -62,11 +59,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   routeChange(url) {
     let routeData = "";
-    if (url.tabTitle == "About") {
+    if (url.tabTitle == "ABOUT") {
       routeData = "/home";
-    } else if (url.tabTitle == "Verify Seed") {
+    } else if (url.tabTitle == "VERIFY SEED") {
       routeData = "/launch";
-    } else if (url.tabTitle == "Recent Activity") {
+    } else if (url.tabTitle == "RECENT ACTIVITY") {
       routeData = "/activity";
     }
     this.router.navigateByUrl(routeData);

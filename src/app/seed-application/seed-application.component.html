@@ -137,19 +137,21 @@
     <table>
       <tr>
         <td><label style="color:black">Seed Provider Information</label></td>
-        <td><textarea rows="4" cols="30"></textarea></td>
+        <td>
+          <textarea rows="4" cols="30" [(ngModel)]="reportDat.info"></textarea>
+        </td>
       </tr>
       <tr>
         <td><label style="color:black">Date of purchase</label></td>
-        <td><input type="date" /></td>
+        <td><input type="date" [(ngModel)]="reportDat.date" /></td>
       </tr>
       <tr>
         <td><label style="color:black">Seed Quality</label></td>
         <td>
-          <select>
-            <option>Fake</option>
-            <option>Original</option>
-            <option>Defective</option>
+          <select [(ngModel)]="reportDat.quality">
+            <option>FAKE</option>
+            <option>GENUINE</option>
+            <option>DEFECTIVE</option>
           </select>
         </td>
       </tr>
@@ -172,8 +174,8 @@
   <nb-card>
     <nb-card-body>
       <div style="color:black; font-size: 18px;text-align: center;">
-        Reported Succesfully To<br />
-        <strong>National Seed Corporation</strong>
+        {{ alertTitle }}<br />
+        <strong>{{ alert }}</strong>
       </div></nb-card-body
     >
   </nb-card>
