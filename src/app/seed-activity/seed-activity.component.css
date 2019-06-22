@@ -57,6 +57,7 @@ th {
 .activity-table {
   max-height: 50vh;
   overflow-y: scroll;
+  -ms-overflow-style: none;
 }
 
 .activity-table::-webkit-scrollbar {

@@ -89,6 +89,10 @@ label {
 img {
   border: 3px solid white;
 }
+.img-fluid {
+  height: 200px !important;
+  width: 200px !important;
+}
 
 .btn-success {
   background-color: #12de12;
@@ -103,6 +107,7 @@ button:disabled {
 .application-container {
   height: 75vh;
   overflow: scroll;
+  -ms-overflow-style: none;
 }
 
 .application-container::-webkit-scrollbar {
